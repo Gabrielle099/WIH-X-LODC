@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>WIH X LODC - Mobile Legend Tournament</title>
+<meta name="description" content="WIH X LODC adalah turnamen Mobile Legend dengan 36 tim yang berkompetisi. Pool prize Rp1.030.000. Daftar sekarang!">
+<meta name="keywords" content="tournament, mobile legend, lodc, wih, esports, kompetisi, mlbb">
+<meta name="author" content="WIH X LODC">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wihlodc.com/">
+<meta property="og:title" content="WIH X LODC - Mobile Legend Tournament">
+<meta property="og:description" content="WIH X LODC adalah turnamen Mobile Legend dengan 36 tim yang berkompetisi. Pool prize Rp1.030.000!">
+<meta property="og:image" content="https://wihlodc.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="WIH X LODC">
+<meta property="og:locale" content="id_ID">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wihlodc.com/">
+<meta name="twitter:title" content="WIH X LODC - Mobile Legend Tournament">
+<meta name="twitter:description" content="WIH X LODC adalah turnamen Mobile Legend dengan 36 tim yang berkompetisi. Pool prize Rp1.030.000!">
+<meta name="twitter:image" content="https://wihlodc.com/og-image.jpg">
+
+<!-- Theme Color untuk Browser Mobile -->
+<meta name="theme-color" content="#07070a">
+<meta name="msapplication-TileColor" content="#07070a">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://wihlodc.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wihlodc.com/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://wihlodc.com/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;min-height:100%;overflow-x:hidden}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#07070a;
+  color:#fff;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.font-display{font-family:'Cormorant Garamond',serif;letter-spacing:.03em}
+
+:root{
+  --gold:#d4b068;
+  --gold-light:#f0dba3;
+  --gold-dark:#a68942;
+  --silver:#9ca3af;
+  --accent-blue:#8cb4d4;
+  --dark:#07070a;
+  --card:rgba(14,14,20,0.92);
+  --border:rgba(212,176,104,0.12);
+  --ease:cubic-bezier(0.35,0,0.15,1);
+  --spacing-xs:4px;
+  --spacing-sm:8px;
+  --spacing-md:12px;
+  --spacing-lg:16px;
+  --spacing-xl:20px;
+  --spacing-2xl:24px;
+  --spacing-3xl:32px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:16px;
+}
+
+.bg-layer{
+  position:fixed;inset:0;z-index:0;
+  background:linear-gradient(145deg,#07070a 0%,#0d0d14 50%,#07070a 100%);
+}
+.ambient-light{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(140px);
+  opacity:0.18;
+  pointer-events:none;
+}
+.ambient-light:nth-child(1){
+  width:600px;height:600px;
+  background:linear-gradient(180deg,var(--gold),var(--gold-dark));
+  top:-250px;left:-180px;
+}
+.ambient-light:nth-child(2){
+  width:500px;height:500px;
+  background:linear-gradient(180deg,var(--accent-blue),#5a8fa8);
+  bottom:-180px;right:-120px;
+  opacity:0.10;
+}
+.ambient-light:nth-child(3){
+  width:300px;height:300px;
+  background:linear-gradient(180deg,var(--gold-light),var(--gold));
+  top:40%;left:60%;
+  opacity:0.06;
+}
+.texture-layer{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:0.025;
+}
+.grid-layer{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(212,176,104,0.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(212,176,104,0.018) 1px,transparent 1px);
+  background-size:72px 72px;
+}
+.dew-layer{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 25%, rgba(212,176,104,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 70% at 85% 75%, rgba(140,180,212,0.04) 0%, transparent 55%),
+    radial-gradient(circle at 35% 65%, rgba(255,255,255,0.018) 0%, transparent 35%),
+    radial-gradient(circle at 65% 35%, rgba(255,255,255,0.012) 0%, transparent 30%);
+  animation:dewShimmer 10s ease-in-out infinite;
+}
+@keyframes dewShimmer{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.88;transform:scale(1.015)}
+}
+.frost-overlay{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(175deg,rgba(255,255,255,0.015) 0%,transparent 35%,transparent 65%,rgba(255,255,255,0.01) 100%);
+}
+
+#app{
+  position:relative;z-index:1;min-height:100vh;
+  padding:var(--spacing-lg);
+  max-width:480px;
+  margin:0 auto;
+}
+
+.page{display:none;opacity:0}
+.page.active{display:block;opacity:1}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-in{animation:fadeUp .35s var(--ease) both}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.card:hover{
+  border-color:rgba(212,176,104,0.22);
+  transform:translateY(-1px);
+  box-shadow:0 8px 28px rgba(0,0, 0, 0.4),0 0 0 1px rgba(212,176,104,0.08)
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,rgba(212,176,104,0.12),rgba(212,176,104,0.06));
+  border:1px solid rgba(212,176,104,0.28);
+  border-radius:999px;
+  padding:var(--spacing-sm) var(--spacing-xl);
+  font-size:9px;
+  letter-spacing:.2em;
+  color:var(--gold);
+  font-family:'Inter',sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+}
+
+.divider{
+  width:64px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);
+  margin:var(--spacing-lg) auto var(--spacing-2xl);
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  padding:var(--spacing-lg) var(--spacing-xl);
+  border-radius:var(--radius-md);
+  font-family:'Inter',sans-serif;
+  font-weight:500;
+  font-size:13px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  border:1px solid;
+  transition:background .25s var(--ease),border-color .25s var(--ease),
+             transform .2s var(--ease),box-shadow .25s var(--ease);
+  text-align:center;
+  text-decoration:none;
+  -webkit-user-select:none;user-select:none;
+}
+.btn-gold{
+  background:linear-gradient(145deg,rgba(212,176,104,0.12),rgba(212,176,104,0.06));
+  border-color:rgba(212,176,104,0.32);
+  color:var(--gold);
+}
+.btn-gold:hover,.btn-gold:active{
+  background:linear-gradient(145deg,rgba(212,176,104,0.2),rgba(212,176,104,0.1));
+  border-color:var(--gold);
+  transform:translateY(-1px);
+  box-shadow:0 6px 24px rgba(212,176,104,0.12);
+}
+.btn-blue{
+  background:linear-gradient(145deg,rgba(140,180,212,0.1),rgba(140,180,212,0.05));
+  border-color:rgba(140,180,212,0.28);
+  color:var(--accent-blue);
+}
+.btn-blue:hover,.btn-blue:active{
+  background:linear-gradient(145deg,rgba(140,180,212,0.18),rgba(140,180,212,0.08));
+  border-color:var(--accent-blue);
+  transform:translateY(-1px);
+  box-shadow:0 6px 24px rgba(140,180,212,0.1);
+}
+.btn-back{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--spacing-sm);
+  background:rgba(255,255,255,0.025);
+  border:1px solid rgba(255,255,255,0.07);
+  color:#707080;
+  padding:var(--spacing-sm) var(--spacing-lg);
+  border-radius:var(--radius-sm);
+  font-size:12px;
+  font-weight:400;
+  cursor:pointer;
+  margin-bottom:var(--spacing-2xl);
+  transition:background .2s var(--ease),color .2s var(--ease),transform .18s var(--ease);
+  font-family:'Inter',sans-serif;
+}
+.btn-back:hover,.btn-back:active{
+  background:rgba(255,255,255,0.05);
+  color:#b0b0b8;
+  transform:translateX(-2px);
+}
+
+.page-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--gold);
+  margin-bottom:var(--spacing-xs);
+}
+.page-subtitle{
+  color:#505058;
+  font-size:11px;
+  font-weight:400;
+  margin-bottom:var(--spacing-xl);
+  letter-spacing:.04em;
+}
+
+.home-header{
+  text-align:center;
+  padding:var(--spacing-3xl) 0 var(--spacing-2xl);
+}
+.home-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(32px,11vw,56px);
+  font-weight:600;
+  line-height:1.05;
+  letter-spacing:.02em;
+  color:#fff;
+  margin-bottom:var(--spacing-sm);
+}
+.home-title .accent{
+  background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.home-title .accent2{
+  color:var(--accent-blue);
+}
+.home-desc{
+  color:#787880;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.85;
+  max-width:300px;
+  margin:0 auto var(--spacing-2xl);
+}
+.home-desc .highlight{
+  color:var(--gold);
+  font-weight:500;
+}
+.home-buttons{
+  display:flex;
+  flex-direction:column;
+  gap:var(--spacing-md);
+  max-width:320px;
+  margin:0 auto var(--spacing-3xl);
+}
+.partners-box{
+  background:var(--card);
+  border:1px solid rgba(212,176,104,0.1);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg) var(--spacing-xl);
+  text-align:center;
+  max-width:320px;
+  margin:0 auto;
+}
+.partners-label{
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.16em;
+  color:#404048;
+  margin-bottom:var(--spacing-sm);
+  text-transform:uppercase;
+}
+.partners-names{
+  font-family:'Cormorant Garamond',serif;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+.coming-soon{
+  text-align:center;
+  padding:var(--spacing-3xl) var(--spacing-lg);
+}
+.coming-soon-icon{
+  font-size:40px;
+  margin-bottom:var(--spacing-lg);
+  opacity:0.5;
+}
+.coming-soon-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:600;
+  color:var(--gold);
+  margin-bottom:var(--spacing-sm);
+}
+.coming-soon-sub{
+  color:#505058;
+  font-size:12px;
+  font-weight:400;
+}
+
+.reg-list{
+  display:flex;
+  flex-direction:column;
+  gap:var(--spacing-sm);
+}
+.reg-item{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:var(--spacing-md);
+  text-align:left;
+  width:100%;
+  transition:border-color .25s var(--ease),background .25s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+  -webkit-user-select:none;user-select:none;
+}
+.reg-item:hover,.reg-item:active{
+  background:rgba(18,18,26,0.95);
+  border-color:rgba(212,176,104,0.25);
+  transform:translateX(3px);
+  box-shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+.reg-icon{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  border-radius:var(--radius-sm);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.reg-icon svg{
+  width:18px;
+  height:18px;
+  stroke:#fff;
+  fill:none;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.reg-text{
+  flex:1;
+  min-width:0;
+}
+.reg-title{
+  font-family:'Inter',sans-serif;
+  font-weight:500;
+  font-size:12px;
+  color:#e8e8ec;
+  margin-bottom:var(--spacing-xs);
+  letter-spacing:.01em;
+}
+.reg-sub{
+  font-size:10px;
+  font-weight:400;
+  color:#404048;
+  letter-spacing:.01em;
+}
+.reg-arrow{
+  color:#303038;
+  font-size:14px;
+  flex-shrink:0;
+  transition:color .2s var(--ease),transform .2s var(--ease);
+}
+.reg-item:hover .reg-arrow{
+  color:var(--gold);
+  transform:translateX(2px);
+}
+
+.reg-detail-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:.02em;
+  margin-bottom:var(--spacing-sm);
+  line-height:1.25;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.reg-detail-divider{
+  height:2px;
+  width:48px;
+  border-radius:99px;
+  margin-bottom:var(--spacing-xl);
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+}
+.reg-body{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+}
+.reg-body p{
+  color:#888890;
+  font-size:12.5px;
+  font-weight:400;
+  line-height:1.85;
+  margin-bottom:var(--spacing-md);
+}
+.reg-body p:last-child{margin-bottom:0}
+.reg-body ul{
+  color:#888890;
+  font-size:12.5px;
+  font-weight:400;
+  line-height:1.8;
+  margin-left:var(--spacing-lg);
+  margin-bottom:var(--spacing-md);
+}
+.reg-body li{margin-bottom:var(--spacing-xs)}
+.reg-body .highlight{
+  color:var(--gold);
+  font-weight:500;
+}
+.reg-body .highlight-blue{
+  color:var(--accent-blue);
+  font-weight:500;
+}
+.reg-body .highlight-red{color:#e87070;font-weight:500}
+.reg-body .highlight-green{color:#5cb86d;font-weight:500}
+
+.info-box{
+  background:linear-gradient(145deg,rgba(212,176,104,0.04),rgba(212,176,104,0.01));
+  border:1px solid rgba(212,176,104,0.08);
+  border-radius:var(--radius-sm);
+  padding:var(--spacing-lg);
+  margin:var(--spacing-md) 0;
+  font-size:12.5px;
+  font-weight:400;
+  color:#888890;
+  line-height:1.75;
+}
+.warn-box{
+  background:linear-gradient(135deg,rgba(232,112,112,0.06),rgba(232,112,112,0.02));
+  border-left:2px solid #e87070;
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:var(--spacing-lg);
+  margin:var(--spacing-md) 0;
+}
+.warn-title{
+  color:#e87070;
+  font-weight:500;
+  font-size:11px;
+  margin-bottom:var(--spacing-sm);
+  letter-spacing:.02em;
+}
+.section-title{
+  font-family:'Inter',sans-serif;
+  font-weight:500;
+  font-size:10px;
+  letter-spacing:.05em;
+  margin-bottom:var(--spacing-sm);
+  margin-top:var(--spacing-xs);
+  color:var(--gold);
+}
+
+.contact-link{
+  display:flex;
+  align-items:center;
+  gap:var(--spacing-md);
+  background:linear-gradient(145deg,rgba(212,176,104,0.06),rgba(212,176,104,0.02));
+  border:1px solid rgba(212,176,104,0.1);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  margin-bottom:var(--spacing-sm);
+  text-decoration:none;
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s;
+}
+.contact-link:hover,.contact-link:active{
+  transform:translateY(-1px);
+  border-color:rgba(212,176,104,0.25);
+  box-shadow:0 6px 20px rgba(212,176,104,0.06);
+}
+.contact-num{
+  width:36px;
+  height:36px;
+  min-width:36px;
+  background:linear-gradient(145deg,var(--gold),var(--gold-dark));
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  color:#0a0a0f;
+  font-size:12px;
+}
+.contact-name{
+  color:#fff;
+  font-weight:500;
+  font-size:13px;
+  margin-bottom:var(--spacing-xs);
+}
+.contact-role{
+  color:#606068;
+  font-size:9px;
+  font-weight:400;
+  margin-bottom:var(--spacing-xs);
+  letter-spacing:.02em;
+}
+.contact-num-text{
+  color:#707078;
+  font-size:10px;
+  font-weight:400;
+}
+
+.prize-box{
+  display:flex;
+  align-items:center;
+  gap:var(--spacing-md);
+  background:var(--card);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  margin-bottom:var(--spacing-sm);
+  transition:transform .2s var(--ease);
+}
+.prize-box:hover{transform:translateX(2px)}
+.prize-medal{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:15px;
+  color:#0a0a0f;
+  flex-shrink:0;
+}
+.prize-rank{
+  font-weight:500;
+  font-size:13px;
+  margin-bottom:var(--spacing-xs);
+}
+.prize-desc{
+  color:#606068;
+  font-size:11px;
+  font-weight:400;
+}
+
+.stage-box{
+  background:linear-gradient(145deg,rgba(212,176,104,0.03),rgba(212,176,104,0.01));
+  border:1px solid rgba(212,176,104,0.08);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  margin-bottom:var(--spacing-sm);
+}
+.stage-box-title{
+  font-family:'Inter',sans-serif;
+  font-weight:500;
+  font-size:10px;
+  letter-spacing:.08em;
+  margin-bottom:var(--spacing-sm);
+  color:var(--gold);
+}
+.stage-box ul{list-style:none;margin:0;padding:0}
+.stage-box ul li{
+  color:#787880;
+  font-size:11.5px;
+  font-weight:400;
+  padding:var(--spacing-sm) 0;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  display:flex;
+  align-items:flex-start;
+  gap:var(--spacing-sm);
+  line-height:1.75;
+}
+.stage-box ul li:last-child{border-bottom:none}
+.stage-box ul li::before{
+  content:"›";
+  color:var(--gold);
+  font-weight:600;
+  flex-shrink:0;
+  margin-top:0;
+}
+
+.rule-item{
+  display:flex;
+  gap:var(--spacing-md);
+  background:linear-gradient(145deg,rgba(212,176,104,0.03),rgba(212,176,104,0.01));
+  border:1px solid rgba(212,176,104,0.06);
+  border-radius:var(--radius-sm);
+  padding:var(--spacing-md) var(--spacing-lg);
+  margin-bottom:var(--spacing-sm);
+  transition:border-color .22s var(--ease),background .22s var(--ease);
+}
+.rule-item:hover{
+  background:linear-gradient(145deg,rgba(212,176,104,0.05),rgba(212,176,104,0.02));
+  border-color:rgba(212,176,104,0.12);
+}
+.rule-num{
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  color:var(--gold);
+  font-size:12px;
+  flex-shrink:0;
+  min-width:18px;
+  line-height:1.75;
+}
+.rule-text{
+  color:#787880;
+  font-size:11.5px;
+  font-weight:400;
+  line-height:1.8;
+}
+
+.flow-box{
+  background:linear-gradient(145deg,rgba(212,176,104,0.08),rgba(140,180,212,0.04));
+  border:1px solid rgba(212,176,104,0.15);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  margin:var(--spacing-md) 0;
+  text-align:center;
+}
+.flow-text{
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  font-weight:400;
+  color:#c8c8d0;
+  letter-spacing:.02em;
+}
+.flow-arrow{
+  color:var(--gold);
+  margin:0 var(--spacing-sm);
+  font-weight:500;
+}
+
+.ambassador-box{
+  background:linear-gradient(145deg,rgba(212,176,104,0.1),rgba(140,180,212,0.05));
+  border:1px solid rgba(212,176,104,0.18);
+  border-radius:var(--radius-md);
+  padding:var(--spacing-lg);
+  margin:var(--spacing-md) 0;
+  text-align:center;
+}
+.ambassador-label{
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.14em;
+  color:#505058;
+  margin-bottom:var(--spacing-sm);
+  text-transform:uppercase;
+}
+.ambassador-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-weight:600;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:.02em;
+}
+
+::-webkit-scrollbar{width:2px}
+::-webkit-scrollbar-track{background:#07070a}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--gold),var(--gold-dark));
+  border-radius:2px;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-layer">
+  <div class="ambient-light"></div>
+  <div class="ambient-light"></div>
+  <div class="ambient-light"></div>
+</div>
+<div class="dew-layer"></div>
+<div class="frost-overlay"></div>
+<div class="texture-layer"></div>
+<div class="grid-layer"></div>
+
+<div id="app">
+
+  <div id="homePage" class="page active">
+    <div class="home-header fade-in">
+      <span class="badge">Mobile Legend Tournament</span>
+      <div class="divider"></div>
+      <h1 class="home-title">
+        <span class="accent">WIH</span> <span class="accent2">X</span> <span class="accent">LODC</span>
+      </h1>
+      <div class="divider"></div>
+      <p class="home-desc">
+        WIH X LODC Adalah Turnamen Yang Berbasis Pada Game Mobile Legend Dan Terdiri Dari
+        <span class="highlight">36 Tim</span> Yang Berkompetisi.
+      </p>
+    </div>
+
+    <div class="home-buttons fade-in">
+      <button class="btn btn-gold" onclick="go('listTimPage')">List Tim</button>
+      <button class="btn btn-blue" onclick="go('aboutPage')">About Tournament</button>
+    </div>
+
+    <div class="partners-box fade-in">
+      <div class="partners-label">Brand Ambassador</div>
+      <div class="partners-names">KOVALSKIA</div>
+    </div>
+  </div>
+
+
+  <div id="listTimPage" class="page">
+    <button class="btn-back" onclick="go('homePage')">Kembali</button>
+    <div class="page-title font-display">List Tim</div>
+    <div class="page-subtitle">36 Tim Peserta Turnamen</div>
+    <div class="coming-soon fade-in">
+      <div class="coming-soon-icon">...</div>
+      <div class="coming-soon-text">Akan Segera Hadir!</div>
+      <div class="coming-soon-sub">Daftar tim akan diumumkan segera</div>
+    </div>
+  </div>
+
+
+  <div id="aboutPage" class="page">
+    <button class="btn-back" onclick="go('homePage')">Kembali</button>
+    <div class="page-title font-display">About Tournament</div>
+    <div class="page-subtitle">Informasi lengkap turnamen</div>
+
+    <div class="reg-list fade-in">
+
+      <button class="reg-item" onclick="showReg('roster')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#c9a962,#9a7d3a)">
+          <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Regulasi Tim-Roster</div>
+          <div class="reg-sub">Ketentuan pemain dan roster tim</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('larangan')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#c45c5c,#8b3a3a)">
+          <svg viewBox="0 0 24 24"><path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Larangan dan Sanksi</div>
+          <div class="reg-sub">Hal-hal yang dilarang</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('ingame')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#4a9e5a,#2d6a38)">
+          <svg viewBox="0 0 24 24"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Regulasi Dalam Game</div>
+          <div class="reg-sub">Aturan dalam pertandingan</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('format')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#8cb4d4,#5a8fa8)">
+          <svg viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Format Pertandingan</div>
+          <div class="reg-sub">Sistem dan format kompetisi</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('waktu')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#7a7ac8,#4a4a9a)">
+          <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Rentang Waktu Bermain</div>
+          <div class="reg-sub">Ketentuan waktu pertandingan</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('jadwal')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#5a9ab8,#3a6a8a)">
+          <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Jadwal Pertandingan</div>
+          <div class="reg-sub">Timeline turnamen</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('achievement')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#c9a962,#9a7d3a)">
+          <svg viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Achievement</div>
+          <div class="reg-sub">Pool prize dan penghargaan</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+      <button class="reg-item" onclick="showReg('contact')">
+        <div class="reg-icon" style="background:linear-gradient(145deg,#4a9e6a,#2d6a48)">
+          <svg viewBox="0 0 24 24" style="fill:#fff;stroke:none">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </div>
+        <div class="reg-text">
+          <div class="reg-title">Admin Contact</div>
+          <div class="reg-sub">Hubungi pengurus turnamen</div>
+        </div>
+        <div class="reg-arrow">›</div>
+      </button>
+
+    </div>
+  </div>
+
+
+  <div id="regDetailPage" class="page">
+    <button class="btn-back" onclick="go('aboutPage')">Kembali</button>
+    <div id="regDetailContent"></div>
+  </div>
+
+</div>
+
+<script>
+var REG = {
+  roster:{
+    title:'Regulasi Tim-Roster',
+    html:function(){return(
+      '<p>Tim yang akan berkompetisi terdiri dari <span class="highlight">36 tim</span>. Tim harus terdiri dari minimal <span class="highlight">5 orang</span> dan maksimal <span class="highlight">10 orang</span>.</p>'+
+      '<p>Setiap tim, harus melaporkan dengan jelas role dari masing-masing pemain yang menjadi bagian tim. Tim tidak diperbolehkan untuk menambah/mengurangi/mengganti pemain dari roster ketika masih di fase tertentu; diperbolehkan saat break menuju fase selanjutnya.</p>'+
+      '<div class="flow-box"><div class="flow-text"><span class="highlight">Group Stage</span> <span class="flow-arrow">></span> Break <span class="flow-arrow">></span> <span class="highlight-blue">Swiss Stage</span> <span class="flow-arrow">></span> Break <span class="flow-arrow">></span> <span class="highlight">Double Elimination</span></div></div>'+
+      '<div class="warn-box"><div class="warn-title">SANKSI PELANGGARAN:</div><ul><li>Didiskualifikasi sepenuhnya</li><li>Pengurangan Poin</li><li>Larangan untuk salah satu player tidak diperbolehkan bermain</li></ul></div>'
+    );}
+  },
+  larangan:{
+    title:'Larangan dan Sanksi',
+    html:function(){return(
+      '<p>Pemain dilarang keras untuk melakukan kecurangan yang dapat merugikan tim lawan dan tim sendiri. Penggunaan pihak ketiga seperti: <span class="highlight-red">Script</span>, <span class="highlight-red">Map Hack</span>, dll yang bernilai merugikan, akan dipastikan mendapatkan sanksi!</p>'+
+      '<div class="warn-box"><div class="warn-title">SANKSI YANG DITERAPKAN:</div><ul><li>Player dibanned langsung dari turnamen</li><li>Tim yang menaungi akan mendapatkan pengurangan point</li><li>Pengawasan ketat jika masih kemungkinan</li><li>Dan kemungkinan-kemungkinan lainnya</li></ul></div>'+
+      '<p>Selain itu, jika sebuah tim/player melanggar catatan-catatan lain, akan dipastikan melalui sanksi-sanksi yang telah ditetapkan.</p>'
+    );}
+  },
+  ingame:{
+    title:'Regulasi Dalam Game',
+    html:function(){return(
+      '<div class="rule-item"><div class="rule-num">1.</div><div class="rule-text">Dilarang keras untuk melakukan <span class="highlight-red">chat all</span>, terkecuali ada urgensi penting atau bertanya karena kebingungan. Jika secara sengaja melanggar, maka match tersebut akan menjadi <span class="highlight">point free</span> bagi tim lawan (diharuskan menyediakan bukti).</div></div>'+
+      '<div class="rule-item"><div class="rule-num">2.</div><div class="rule-text">Tidak diperbolehkan melakukan <span class="highlight-red">radio all</span> (selain radio yang bersifat all, diperbolehkan). Jika secara sengaja atau tidak sengaja melakukan radio all sebanyak <span class="highlight">1-2x</span>, tim masih diberi toleransi. Jika lebih, match tersebut akan menjadi <span class="highlight">point free</span> bagi tim lawan.</div></div>'+
+      '<div class="rule-item"><div class="rule-num">3.</div><div class="rule-text">Pemain hanya boleh menggunakan <span class="highlight">2 akun berbeda</span>. Lebih dari itu? Dipastikan pemain tersebut akan diawasi secara ketat dan berpotensi terkena sanksi, begitu juga tim yang menaunginya.</div></div>'+
+      '<div class="rule-item"><div class="rule-num">4.</div><div class="rule-text">Pemain yang tidak bermain/bukan bagian tim, tidak diperkenankan untuk menyaksikan pertandingan tersebut (kecuali jika panitia/admin mengizinkan). Jika terjadi aksi spionase, maka admin atau penonton dari tim tersebut akan dikenakan sanksi.</div></div>'
+    );}
+  },
+  format:{
+    title:'Format Pertandingan',
+    html:function(){return(
+      '<div class="stage-box"><div class="stage-box-title">GROUP STAGE</div><ul>'+
+      '<li>Pertandingan dimulai dengan format <span class="highlight">Group Stage</span>, terdiri dari <span class="highlight">6 group</span>; setiap group terdiri dari <span class="highlight">6 tim</span>.</li>'+
+      '<li>Penentuan sebuah tim akan berada di group mana, akan dilakukan melalui <span class="highlight">spin</span>.</li>'+
+      '<li>Setiap tim akan melalui <span class="highlight">5x pertandingan BO3</span> pada babak group stage.</li>'+
+      '<li>Tim yang berada di urutan <span class="highlight">1-4</span>, dipastikan akan melaju pada fase <span class="highlight-blue">Swiss Stage</span>.</li>'+
+      '</ul></div>'+
+      '<div class="stage-box"><div class="stage-box-title">SWISS STAGE</div><ul>'+
+      '<li>Hanya <span class="highlight">24 tim</span> yang tersisa pada fase ini.</li>'+
+      '<li>Tim yang tersisa akan dispin untuk bertemu lawan di group yang berbeda.</li>'+
+      '<li>Setiap tim akan bertanding minimal <span class="highlight">3x</span> dan maksimal <span class="highlight">5x</span>.</li>'+
+      '<li>Pertandingan bersifat <span class="highlight">BO3</span>.</li>'+
+      '<li>Tim yang berhasil melaju, akan berlabuh ke fase <span class="highlight">Double Elimination</span>.</li>'+
+      '</ul></div>'+
+      '<div class="stage-box"><div class="stage-box-title">DOUBLE ELIMINATION</div><ul>'+
+      '<li>Tim yang tersisa hanya <span class="highlight">12 tim</span>.</li>'+
+      '<li>Setiap tim akan dispin kembali untuk menghadapi lawan masing-masing.</li>'+
+      '</ul></div>'+
+      '<div class="stage-box"><div class="stage-box-title">FINAL LOWER BRACKET</div><ul>'+
+      '<li>Admin akan melakukan <span class="highlight-red">live di TikTok</span> untuk menonton keseruan pertandingan!</li>'+
+      '<li>Format: <span class="highlight">BO5</span>.</li>'+
+      '</ul></div>'+
+      '<div class="stage-box"><div class="stage-box-title">GRAND FINAL</div><ul>'+
+      '<li>Admin akan kembali melakukan <span class="highlight-red">live di TikTok</span> dan memantau keseruan Grand Final.</li>'+
+      '<li>Format: <span class="highlight">BO5</span>.</li>'+
+      '</ul></div>'+
+      '<div class="flow-box"><div class="flow-text"><span class="highlight">Group Stage</span> <span class="flow-arrow">></span> <span class="highlight-blue">Swiss Stage</span> <span class="flow-arrow">></span> <span class="highlight">Double Elimination</span></div></div>'
+    );}
+  },
+  waktu:{
+    title:'Rentang Waktu Bermain',
+    html:function(){return(
+      '<p>Ketika pertandingan dimulai, salah satu tim yang sudah ditentukan akan membuat room dan membagikannya melalui code atau link kepada admin menuju GH tim lain.</p>'+
+      '<div class="info-box">Jika tim lawan tidak memasuki room tersebut secara penuh selama <span class="highlight">15 menit</span>, maka tim lawan akan kehilangan <span class="highlight-red">1 point</span>.</div>'+
+      '<p>Dari sana, match kedua akan dihitung kembali dari waktu yang sebelumnya dan menerapkan sistem yang serupa.</p>'
+    );}
+  },
+  jadwal:{
+    title:'Jadwal Pertandingan',
+    html:function(){return(
+      '<div class="coming-soon" style="padding:48px 16px">'+
+        '<div class="coming-soon-icon">...</div>'+
+        '<div class="coming-soon-text">Akan Segera Hadir!</div>'+
+        '<div class="coming-soon-sub">Jadwal pertandingan akan diumumkan segera</div>'+
+      '</div>'
+    );}
+  },
+  achievement:{
+    title:'Achievement',
+    html:function(){return(
+      '<div class="info-box" style="text-align:center;font-size:12px">Untuk mengikuti kompetisi ini, <span class="highlight-green">TIDAK DIPERKENANKAN BIAYA</span> sepeser pun!</div>'+
+      '<div style="text-align:center;margin:20px 0 16px"><div style="color:#505058;font-size:10px;font-weight:500;letter-spacing:.05em;margin-bottom:6px">Pool Prize</div><div style="font-family:Cormorant Garamond,serif;font-size:30px;font-weight:600;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Rp1.030.000</div></div>'+
+      '<div class="prize-box" style="border-left:2px solid var(--gold)">'+
+        '<div class="prize-medal" style="background:linear-gradient(145deg,var(--gold),var(--gold-dark))">1</div>'+
+        '<div><div class="prize-rank" style="color:var(--gold)">Juara 1</div><div class="prize-desc">Rp450.000 & Sertif Kejuaraan</div></div>'+
+      '</div>'+
+      '<div class="prize-box" style="border-left:2px solid var(--silver)">'+
+        '<div class="prize-medal" style="background:linear-gradient(145deg,#a8a8b0,#707078)">2</div>'+
+        '<div><div class="prize-rank" style="color:var(--silver)">Juara 2</div><div class="prize-desc">Rp250.000 & Sertif Kejuaraan</div></div>'+
+      '</div>'+
+      '<div class="prize-box" style="border-left:2px solid #b87333">'+
+        '<div class="prize-medal" style="background:linear-gradient(145deg,#b87333,#8a5a2a)">3</div>'+
+        '<div><div class="prize-rank" style="color:#b87333">Juara 3</div><div class="prize-desc">Rp150.000 & Sertif Kejuaraan</div></div>'+
+      '</div>'+
+      '<div class="info-box" style="text-align:center;margin-top:12px;font-size:11px"><em>Sisa Rp130.000 untuk menyewa room tour (khusus final)</em></div>'+
+      '<div class="ambassador-box">'+
+        '<div class="ambassador-label">Brand Ambassador</div>'+
+        '<div class="ambassador-name">KOVALSKIA</div>'+
+      '</div>'+
+      '<div class="info-box" style="text-align:center;margin-top:12px"><div style="color:#404048;font-size:9px;font-weight:500;letter-spacing:.04em;margin-bottom:4px">SPECIAL PARTNERS</div><div style="font-family:Inter,sans-serif;color:var(--gold);font-weight:500;font-size:10px;line-height:1.7;letter-spacing:.01em">Gabriel, Adit, Daffxy, Hekta, Bhima, Aldi, Jay, Mona, Ayon, Shin</div></div>'
+    );}
+  },
+  contact:{
+    title:'Admin Contact',
+    html:function(){return(
+      '<p style="color:#606068;font-size:11px;margin-bottom:16px;text-align:center;font-weight:400">Setiap pengurus akan mengurus grup yang diurus di fase grup nanti. Setelah melewati fase grup, maka setiap pengurus akan mengurus seluruhnya.</p>'+
+      '<div style="text-align:center;margin-bottom:14px"><span style="font-size:9px;letter-spacing:.12em;color:#404048;font-weight:500;text-transform:uppercase">Pengurus / Panitia</span></div>'+
+      '<a href="https://wa.me/6283139964109" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">1</div>'+
+        '<div><div class="contact-role">Pengurus Grup 1</div><div class="contact-name">Yura</div><div class="contact-num-text">0831-3996-4109</div></div>'+
+      '</a>'+
+      '<a href="https://wa.me/6289690835452" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">2</div>'+
+        '<div><div class="contact-role">Pengurus Grup 2</div><div class="contact-name">Reinne</div><div class="contact-num-text">0896-9083-5452</div></div>'+
+      '</a>'+
+      '<a href="https://wa.me/6285381927438" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">3</div>'+
+        '<div><div class="contact-role">Pengurus Grup 3</div><div class="contact-name">Ilfiny</div><div class="contact-num-text">0853-8192-7438</div></div>'+
+      '</a>'+
+      '<a href="https://wa.me/6281371485814" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">4</div>'+
+        '<div><div class="contact-role">Pengurus Grup 4</div><div class="contact-name">Adit</div><div class="contact-num-text">0813-7148-5814</div></div>'+
+      '</a>'+
+      '<a href="https://wa.me/6285714249130" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">5</div>'+
+        '<div><div class="contact-role">Pengurus Grup 5</div><div class="contact-name">Duta</div><div class="contact-num-text">0857-1424-9130</div></div>'+
+      '</a>'+
+      '<a href="https://wa.me/6281225974441" target="_blank" rel="noopener" class="contact-link">'+
+        '<div class="contact-num">6</div>'+
+        '<div><div class="contact-role">Pengurus Grup 6</div><div class="contact-name">Daffxy</div><div class="contact-num-text">0812-2597-4441</div></div>'+
+      '</a>'
+    );}
+  }
+};
+
+var current = 'homePage';
+
+function go(pageId){
+  document.getElementById(current).classList.remove('active');
+  var target = document.getElementById(pageId);
+  target.classList.remove('fade-in');
+  void target.offsetWidth;
+  target.classList.add('active','fade-in');
+  current = pageId;
+  window.scrollTo(0,0);
+  playChime();
+}
+
+function showReg(id){
+  var d = REG[id];
+  document.getElementById('regDetailContent').innerHTML =
+    '<div class="reg-detail-title fade-in">'+d.title+'</div>'+
+    '<div class="reg-detail-divider fade-in"></div>'+
+    '<div class="reg-body fade-in">'+d.html()+'</div>';
+  go('regDetailPage');
+}
+
+var AC = null;
+function initAC(){
+  if(!AC) try{ AC = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){}
+}
+function playChime(){
+  initAC();
+  if(!AC) return;
+  try{
+    var t = AC.currentTime;
+    var o1 = AC.createOscillator();
+    var g1 = AC.createGain();
+    o1.type = 'sine';
+    o1.frequency.setValueAtTime(1200, t);
+    o1.frequency.exponentialRampToValueAtTime(800, t + 0.15);
+    g1.gain.setValueAtTime(0, t);
+    g1.gain.linearRampToValueAtTime(0.08, t + 0.01);
+    g1.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
+    o1.connect(g1); g1.connect(AC.destination);
+    o1.start(t); o1.stop(t + 0.25);
+    
+    var o2 = AC.createOscillator();
+    var g2 = AC.createGain();
+    o2.type = 'sine';
+    o2.frequency.setValueAtTime(2400, t + 0.02);
+    o2.frequency.exponentialRampToValueAtTime(1600, t + 0.12);
+    g2.gain.setValueAtTime(0, t + 0.02);
+    g2.gain.linearRampToValueAtTime(0.03, t + 0.03);
+    g2.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+    o2.connect(g2); g2.connect(AC.destination);
+    o2.start(t + 0.02); o2.stop(t + 0.2);
+    
+    var o3 = AC.createOscillator();
+    var g3 = AC.createGain();
+    o3.type = 'sine';
+    o3.frequency.setValueAtTime(600, t + 0.04);
+    o3.frequency.exponentialRampToValueAtTime(400, t + 0.2);
+    g3.gain.setValueAtTime(0, t + 0.04);
+    g3.gain.linearRampToValueAtTime(0.02, t + 0.05);
+    g3.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+    o3.connect(g3); g3.connect(AC.destination);
+    o3.start(t + 0.04); o3.stop(t + 0.3);
+  }catch(e){}
+}
+document.addEventListener('click',function(){initAC();},{once:true});
+</script>
+</body>
+</html>
